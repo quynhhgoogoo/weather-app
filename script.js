@@ -29,14 +29,14 @@ window.addEventListener("load", () => {
                     locationTimezone.textContent = data.timezone;
 
                     //Set Icon
-                    setIcons(icon, );
+                    setIcons(icon, document.querySelector('.icon'));
                 });
         });
 
     }
 
     function setIcons(icon, iconID) {
-        const skycons = new skycons({ color: "white" });
+        const skycons = new Skycons({ color: "white" });
         /*look for - and replace - with _ */
         const currentIcon = icon.replace(/-/g, "_").toUpperCase();
         skycons.play();
